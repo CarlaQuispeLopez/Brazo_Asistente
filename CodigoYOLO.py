@@ -5,14 +5,9 @@ import cv2
 # CONFIGURACIÓN CÁMARA
 # 0 = HD Webcam, 1 = Venus USB2.0 Camera
 CAMARA_INDEX = 2
-# Si no funciona con 1, prueba con 0
 # ─────────────────────────────────────────
 
-COLORES = [
-    (0,255,0),(255,100,0),(0,100,255),(255,0,255),(0,255,255),
-    (255,255,0),(100,255,100),(255,150,50),(50,200,255),(200,50,255),
-    (150,0,255),(0,200,150),(255,50,150),(100,100,255),(50,255,200)
-]
+COLOR_PIEZA = (0, 255, 0)
 
 class DetectorAlimentos:
     def __init__(self):
@@ -69,13 +64,12 @@ class DetectorAlimentos:
         alimentos = []
         for box in results.boxes:
             x1, y1, x2, y2 = box.xyxy[0].tolist()
-            clase = results.names[int(box.cls[0])]
             alimentos.append({
-                'clase': clase,
+                'clase': "TROZO DE COMIDA",           # ← siempre esta etiqueta
                 'centro_px': (int((x1+x2)/2), int((y1+y2)/2)),
                 'bbox': (int(x1), int(y1), int(x2), int(y2)),
                 'confianza': float(box.conf[0]),
-                'color': COLORES[int(box.cls[0]) % len(COLORES)]
+                'color': COLOR_PIEZA
             })
 
         alimentos.sort(key=lambda x: x['confianza'], reverse=True)
@@ -83,23 +77,22 @@ class DetectorAlimentos:
 
     def visualizar(self, frame, alimentos):
         overlay = frame.copy()
-        cv2.rectangle(overlay, (0,0), (380, 40), (0,0,0), -1)
+        cv2.rectangle(overlay, (0,0), (420, 40), (0,0,0), -1)
         cv2.addWeighted(overlay, 0.5, frame, 0.5, 0, frame)
-        cv2.putText(frame, f"Venus USB Cam  |  Alimentos: {len(alimentos)}",
+        cv2.putText(frame, f"Venus USB Cam  |  Trozos detectados: {len(alimentos)}",
                     (10, 28), cv2.FONT_HERSHEY_SIMPLEX, 0.75, (255,255,255), 2)
 
         for a in alimentos:
             x1, y1, x2, y2 = a['bbox']
             cx, cy = a['centro_px']
-            color = a['color']
 
-            cv2.rectangle(frame, (x1,y1), (x2,y2), color, 2)
+            cv2.rectangle(frame, (x1,y1), (x2,y2), COLOR_PIEZA, 2)
             cv2.circle(frame, (cx, cy), 6, (0,0,255), -1)
             cv2.circle(frame, (cx, cy), 6, (255,255,255), 1)
 
-            label = f"{a['clase']} {a['confianza']:.2f}"
+            label = f"TROZO DE COMIDA {a['confianza']:.2f}"
             (tw, th), _ = cv2.getTextSize(label, cv2.FONT_HERSHEY_SIMPLEX, 0.55, 1)
-            cv2.rectangle(frame, (x1, y1-th-8), (x1+tw+4, y1), color, -1)
+            cv2.rectangle(frame, (x1, y1-th-8), (x1+tw+4, y1), COLOR_PIEZA, -1)
             cv2.putText(frame, label, (x1+2, y1-4),
                         cv2.FONT_HERSHEY_SIMPLEX, 0.55, (255,255,255), 1)
 
@@ -116,7 +109,7 @@ class DetectorAlimentos:
 
 def main():
     print(f"Abriendo camara Venus USB (indice {CAMARA_INDEX})...")
-    cap = cv2.VideoCapture(CAMARA_INDEX, cv2.CAP_DSHOW)  # CAP_DSHOW = más estable en Windows
+    cap = cv2.VideoCapture(CAMARA_INDEX, cv2.CAP_DSHOW)
 
     if not cap.isOpened():
         print(f"Error: no se pudo abrir camara {CAMARA_INDEX}.")

@@ -26,7 +26,7 @@ import time
 from PIL import Image
 from transformers import pipeline as hf_pipeline
 
-CAMERA_INDEX   = 0
+CAMERA_INDEX   = 1
 FRAME_W        = 640
 FRAME_H        = 480
 DEVICE         = "cuda" if torch.cuda.is_available() else "cpu"

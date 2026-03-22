@@ -1,11 +1,8 @@
 from ultralytics import YOLOWorld
 import cv2
 
-# ─────────────────────────────────────────
-# CONFIGURACIÓN CÁMARA
-# 0 = HD Webcam, 1 = Venus USB2.0 Camera
+
 CAMARA_INDEX = 2
-# ─────────────────────────────────────────
 
 COLOR_PIEZA = (0, 255, 0)
 
@@ -15,7 +12,6 @@ class DetectorAlimentos:
         self.model = YOLOWorld('yolov8m-world.pt')
 
         self.model.set_classes([
-            # ── FRUTAS ──
             "apple", "pear", "peach", "plum", "apricot", "cherry",
             "strawberry", "raspberry", "blueberry", "blackberry",
             "grape", "watermelon", "melon", "cantaloupe", "honeydew",
@@ -24,7 +20,6 @@ class DetectorAlimentos:
             "fig", "date", "lychee", "guava", "passion fruit",
             "dragon fruit", "star fruit", "persimmon", "pomegranate seed",
 
-            # ── VERDURAS Y HORTALIZAS ──
             "tomato", "cherry tomato", "carrot piece", "broccoli floret",
             "cauliflower", "lettuce piece", "cucumber slice", "zucchini",
             "eggplant", "bell pepper", "corn kernel", "pea",
@@ -33,7 +28,6 @@ class DetectorAlimentos:
             "mushroom", "onion piece", "leek", "spinach", "kale",
             "cabbage piece", "brussels sprout", "bok choy",
 
-            # ── PROTEÍNAS Y CARNES ──
             "chicken piece", "beef piece", "pork piece", "lamb piece",
             "turkey piece", "sausage slice", "meatball", "nugget",
             "shrimp", "fish piece", "salmon chunk", "tuna piece",
@@ -41,14 +35,12 @@ class DetectorAlimentos:
             "boiled egg", "fried egg piece", "omelette piece",
             "tofu cube", "tempeh piece",
 
-            # ── CARBOHIDRATOS Y OTROS ──
             "pasta piece", "noodle", "gnocchi", "dumpling",
             "rice ball", "bread piece", "crouton",
             "cheese cube", "mozzarella", "ham piece",
             "olive", "pickle slice", "sun-dried tomato",
             "chickpea", "lentil", "bean",
 
-            # ── GENÉRICOS (fallback) ──
             "food piece", "fruit piece", "vegetable piece", "meat piece"
         ])
         print(f"Modelo listo. {len(self.model.names)} clases cargadas.\n")

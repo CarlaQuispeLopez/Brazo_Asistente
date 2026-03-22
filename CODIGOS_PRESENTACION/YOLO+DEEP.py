@@ -6,7 +6,7 @@ import torch
 from ultralytics import YOLOWorld
 from transformers import pipeline as hf_pipeline
 
-CAMARA_INDEX   = 2
+CAMARA_INDEX   = 0
 FRAME_W        = 1280
 FRAME_H        = 720
 YOLO_CONF      = 0.35
@@ -21,15 +21,36 @@ COLORES = [
 
 yolo = YOLOWorld('yolov8m-world.pt')
 yolo.set_classes([
-    "apple","pear","banana","grape","strawberry","watermelon",
-    "orange slice","mango","kiwi","peach","cherry",
-    "tomato","cherry tomato","carrot piece","broccoli floret",
-    "cucumber slice","bell pepper","lettuce piece","mushroom",
-    "potato chunk","corn kernel","spinach",
-    "chicken piece","beef piece","pork piece","meatball","nugget",
-    "shrimp","fish piece","boiled egg","tofu cube",
-    "pasta piece","rice ball","bread piece","dumpling",
-    "food piece","fruit piece","vegetable piece","meat piece"
+    "apple", "pear", "peach", "plum", "apricot", "cherry",
+    "strawberry", "raspberry", "blueberry", "blackberry",
+    "grape", "watermelon", "melon", "cantaloupe", "honeydew",
+    "banana", "mango", "papaya", "pineapple chunk", "kiwi",
+    "orange slice", "mandarin", "lemon slice", "lime slice",
+    "fig", "date", "lychee", "guava", "passion fruit",
+    "dragon fruit", "star fruit", "persimmon", "pomegranate seed",
+
+    "tomato", "cherry tomato", "carrot piece", "broccoli floret",
+    "cauliflower", "lettuce piece", "cucumber slice", "zucchini",
+    "eggplant", "bell pepper", "corn kernel", "pea",
+    "green bean", "asparagus", "artichoke", "celery piece",
+    "beet", "radish", "turnip", "potato chunk", "sweet potato",
+    "mushroom", "onion piece", "leek", "spinach", "kale",
+    "cabbage piece", "brussels sprout", "bok choy",
+
+    "chicken piece", "beef piece", "pork piece", "lamb piece",
+    "turkey piece", "sausage slice", "meatball", "nugget",
+    "shrimp", "fish piece", "salmon chunk", "tuna piece",
+    "squid piece", "octopus piece", "crab meat",
+    "boiled egg", "fried egg piece", "omelette piece",
+    "tofu cube", "tempeh piece",
+
+    "pasta piece", "noodle", "gnocchi", "dumpling",
+    "rice ball", "bread piece", "crouton",
+    "cheese cube", "mozzarella", "ham piece",
+    "olive", "pickle slice", "sun-dried tomato",
+    "chickpea", "lentil", "bean",
+
+    "food piece", "fruit piece", "vegetable piece", "meat piece"
 ])
 
 depth_pipe = hf_pipeline(

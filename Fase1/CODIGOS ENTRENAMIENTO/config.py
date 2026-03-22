@@ -1,5 +1,6 @@
 # ============================================================
 # config.py — Configuración central del brazo robótico NutriBot
+# v2: gripper stepper (sube/baja garra), sin rotacion, HOME real
 # ============================================================
 
 # ---------- Puerto Serial ----------
@@ -11,7 +12,6 @@ SERIAL_TIMEOUT = 2
 CAMERA_INDEX = 0
 FRAME_W      = 640
 FRAME_H      = 480
-FPS_TARGET   = 30
 
 # ---------- YOLO ----------
 YOLO_MODEL_PATH = "yolov8m-world.pt"
@@ -32,89 +32,106 @@ FOOD_CLASSES = [
 
 # ---------- Depth Anything ----------
 DEPTH_MODEL_NAME = "depth-anything/Depth-Anything-V2-Base-hf"
-DEPTH_MIN_CM     = 5.0
-DEPTH_MAX_CM     = 60.0
-DEPTH_EVERY_N_FRAMES = 6
 
-# ---------- Calibración Depth Anything (raw → centímetros) ----------
-# Medir con: python calibrate_depth.py
-# Colocar objeto a cada distancia y registrar valor raw del modelo.
-# Los puntos deben estar ordenados de mayor raw (más cerca) a menor raw (más lejos).
-DEPTH_CALIB_RAW_POINTS = [0.95, 0.80, 0.60, 0.42, 0.28, 0.18]  # REEMPLAZAR
-DEPTH_CALIB_CM_POINTS  = [10.0, 15.0, 20.0, 30.0, 40.0, 50.0]  # REEMPLAZAR
+# Normalización de profundidad por frame (valores raw del modelo).
+# El modelo devuelve profundidad RELATIVA, no métrica.
+# depth_norm se calcula por percentil dentro del frame capturado.
+# Estos límites son de referencia para detectar si algo está "cerca" o "lejos"
+# en la escena del plato.
+#
+# Calibración realizada (calibrate_depth.py):
+#   10 cm → raw 180.5214  (distancias 10-15 cm son inciertas)
+#   15 cm → raw 231.8959  (idem)
+#   20 cm → raw  82.7459
+#   ~20 cm → raw 209.8783  (etiquetado 30cm, medido ~20cm)
+#   ~24 cm → raw 211.1597  (etiquetado 40cm, medido ~24cm)
+#
+# NOTA: Los valores raw no son monotónicos con la distancia porque
+# Depth Anything produce profundidad relativa a la escena completa.
+# Se usa normalización por percentil del frame; no se convierte a cm.
+#
+# Rango observado de raw en el plato de comida:
+DEPTH_RAW_MIN = 80.0    # objeto lejos del gripper  (referencia)
+DEPTH_RAW_MAX = 235.0   # objeto cerca del gripper   (referencia)
 
-# ---------- Zona alcanzable del brazo en el frame ----------
-# Medir con: python calibrate_reachable_zone.py
-# Mover gripper a sus extremos y registrar coordenadas de píxel.
-REACHABLE_ZONE_PX      = (160, 100, 480, 420)   # (x1, y1, x2, y2) REEMPLAZAR
-REACHABLE_DEPTH_MIN_CM = 10.0                    # REEMPLAZAR
-REACHABLE_DEPTH_MAX_CM = 45.0                    # REEMPLAZAR
-
-# ---------- Motores — pines RAMPS 1.4 ----------
-MOTOR_AXES = {
-    "base":     {"step": 54, "dir": 55, "en": 38},
-    "hombro":   {"step": 60, "dir": 61, "en": 56},
-    "codo":     {"step": 46, "dir": 48, "en": 62},
-    "muneca":   {"step": 26, "dir": 28, "en": 24},
-    "rotacion": {"step": 36, "dir": 34, "en": 30},
+# ---------- HOME — posición funcional de captura ----------
+# Cuando el brazo está en HOME, la cámara enfoca bien el plato.
+# Se toma la foto ANTES de cualquier movimiento.
+HOME_POSITION = {
+    "base":    0,
+    "hombro":  100,
+    "codo":    1000,
+    "gripper": 0,   # gripper stepper (sube/baja la garra)
 }
-SERVO_PIN     = 9
-GRIPPER_OPEN  = 180
-GRIPPER_CLOSE = 60
+
+# ---------- Motores — ejes activos ----------
+# base    → Arduino: BASE N
+# hombro  → Arduino: HOMBRO N
+# codo    → Arduino: CODO N
+# gripper → Arduino: GRIPPER N   (sube/baja la garra, antes "muneca")
+# GIRO no se usa (descartado del proyecto)
+MOTOR_AXES = {
+    "base":    {"cmd": "BASE"},
+    "hombro":  {"cmd": "HOMBRO"},
+    "codo":    {"cmd": "CODO"},
+    "gripper": {"cmd": "GRIPPER"},
+}
+
+# Pinza (servo) — comandos seriales
+PINZA_OPEN_CMD  = "PINZA ABRIR"
+PINZA_CLOSE_CMD = "PINZA CERRAR"
+PINZA_ANGLE_CMD = "PINZA"       # + " N" donde N ∈ [0, 90]
+
+# ---------- Límites de articulación (en pasos) ----------
+JOINT_LIMITS = {
+    "base":    (-2300, 1000),
+    "hombro":  (-2400, 2400),
+    "codo":    (-2000, 2000),
+    "gripper": (-400,   400),   # sube/baja la garra
+}
 
 # ---------- Movimiento ----------
-STEPS_PER_REV  = 200
-MICROSTEP      = 8
-STEPS_FULL     = STEPS_PER_REV * MICROSTEP   # 1600 pasos/vuelta
-DEFAULT_SPEED  = 800
+STEPS_PER_REV   = 200
+MICROSTEP       = 8
+STEPS_FULL      = STEPS_PER_REV * MICROSTEP   # 1600 pasos/vuelta
+DEFAULT_SPEED   = 800
 MAX_JOINT_STEPS = 3200
 
-JOINT_LIMITS = {
-    "base":     (-2300, 1000),
-    "hombro":   (-2400, 2400),
-    "codo":     (-2000, 2000),
-    "muneca":   (-400,  400),
-    "rotacion": (-400,  400),
-}
+# ---------- Gripper y agarre ----------
+# Tiempo de estabilización mecánica tras cierre de pinza.
+GRIPPER_STABILIZE_SECS = 1.0
 
-# ---------- Fases del pipeline ----------
-# SEARCH   → RL activo, YOLO + Depth activos, MediaPipe inactivo
-# GRASP    → RL activo, YOLO + Depth activos, MediaPipe inactivo
-# DELIVERY → RL detenido, controlador proporcional activo, MediaPipe activo
+# Pasos de hombro hacia arriba para confirmar que el agarre fue exitoso.
+# El brazo levanta el hombro; si la pinza tiene algo, lo levanta.
+# El operador o la lógica del RL verifica visualmente / por éxito de movimiento.
+LIFT_SUCCESS_STEPS = 200
 
-# Umbral de pasos del hombro para habilitar la fase DELIVERY.
-# Medir con: python calibrate_shoulder_threshold.py
-# Mover hombro hasta que el gripper esté a la altura de la boca de la persona.
-DELIVERY_SHOULDER_STEPS = 1500    # REEMPLAZAR
+# ---------- Espacio de Estado y Acción ----------
+# Estado (8 dimensiones):
+#   [food_cx_norm, food_cy_norm, food_depth_norm,    ← desde snapshot
+#    j_base, j_hombro, j_codo, j_gripper,            ← posiciones articulares
+#    pinza_state]                                     ← 0=abierta, 1=cerrada
+STATE_DIM  = 8
 
-# Tiempo de estabilización mecánica tras cierre del gripper (segundos).
-# Medir con: python calibrate_stabilization.py
-GRIPPER_STABILIZE_SECS = 1.5     # REEMPLAZAR
+# Acciones (9 discretas):
+#   0  base+        4  codo+
+#   1  base-        5  codo-
+#   2  hombro+      6  gripper+   (sube garra)
+#   3  hombro-      7  gripper-   (baja garra)
+#                   8  cerrar_pinza
+ACTION_DIM   = 9
+ACTION_STEPS = 100
 
-# Ratio de aumento de profundidad para confirmar agarre.
-# Si después de cerrar el gripper la profundidad aumenta más de este porcentaje,
-# se considera que el alimento ya no está en el plato (fue agarrado).
-GRASP_DEPTH_LOSS_RATIO = 0.25
+# ---------- Recompensa ----------
+REWARD_GRASP_SUCCESS = 10.0
+REWARD_STEP_PENALTY  = -0.01
+REWARD_DIST_SCALE    = 1.0
+REWARD_COLLISION     = -5.0
+MAX_EPISODE_STEPS    = 200
 
-# Distancia gripper-boca (cm) para considerar la entrega completa y abrir el gripper.
-MOUTH_PROXIMITY_CM = 12.0
-
-# ---------- Controlador proporcional para DELIVERY ----------
-# Ganancias del controlador P que guía el brazo hacia la boca.
-# Ajustar empíricamente: aumentar si el brazo reacciona lento, bajar si oscila.
-DELIVERY_KP_BASE    = 0.8   # ganancia base para corregir posición horizontal
-DELIVERY_KP_HOMBRO  = 0.6   # ganancia hombro para corregir altura
-DELIVERY_KP_CODO    = 0.4   # ganancia codo para corregir profundidad
-DELIVERY_DEAD_ZONE  = 0.05  # zona muerta normalizada (no actuar si error < esto)
-DELIVERY_STEPS_BASE = 50    # pasos por corrección discreta de base
-DELIVERY_STEPS_HOMBRO = 50  # pasos por corrección discreta de hombro
-DELIVERY_STEPS_CODO   = 50  # pasos por corrección discreta de codo
-
-# ---------- MediaPipe ----------
-FACE_CONF_THRESHOLD  = 0.6
-FACE_TRACK_THRESHOLD = 0.6
-MOUTH_UPPER_LIP_IDX  = 13
-MOUTH_LOWER_LIP_IDX  = 14
+# Profundidad mínima normalizada para intentar agarre.
+# Si food_depth_norm < este valor, el agarre es "prematuro" y se penaliza.
+GRASP_MIN_DEPTH_NORM = 0.6   # ajustar empíricamente
 
 # ---------- Aprendizaje por Imitación (BC) ----------
 DEMO_DIR      = "demos"
@@ -128,24 +145,9 @@ BC_HIDDEN_DIM = 256
 # ---------- Aprendizaje por Refuerzo (PPO) ----------
 RL_MODEL_PATH    = "models/ppo_policy"
 RL_TOTAL_STEPS   = 200_000
-RL_N_ENVS        = 1
 RL_LEARNING_RATE = 3e-4
 RL_N_STEPS       = 512
 RL_BATCH_SIZE    = 64
 RL_N_EPOCHS      = 10
 RL_GAMMA         = 0.99
 RL_ENT_COEF      = 0.01
-
-# ---------- Espacio de Estado y Acción ----------
-# El agente RL solo opera en fases SEARCH y GRASP.
-# Estado: [food_cx_norm, food_cy_norm, food_depth_norm, j0..j4]
-STATE_DIM  = 8
-ACTION_DIM = 11
-ACTION_STEPS = 100
-
-# ---------- Recompensa ----------
-REWARD_GRASP_SUCCESS = 10.0
-REWARD_STEP_PENALTY  = -0.01
-REWARD_DIST_SCALE    = 1.0
-REWARD_COLLISION     = -5.0
-MAX_EPISODE_STEPS    = 200

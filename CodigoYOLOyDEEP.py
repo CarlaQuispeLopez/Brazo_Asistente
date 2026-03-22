@@ -25,7 +25,7 @@ from transformers import pipeline as hf_pipeline
 # ──────────────────────────────────────────────
 #  CONFIGURACIÓN
 # ──────────────────────────────────────────────
-CAMARA_INDEX  = 2
+CAMARA_INDEX  = 0
 FRAME_W       = 1280
 FRAME_H       = 720
 YOLO_CONF     = 0.35

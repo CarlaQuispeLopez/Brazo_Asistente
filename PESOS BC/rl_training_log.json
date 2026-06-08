@@ -1,0 +1,1410 @@
+{
+  "episodes": [
+    {
+      "timestamp": "2026-03-29T17:49:16.489127",
+      "episode": 1,
+      "success": false,
+      "reward": -0.8,
+      "reason": "cerr\u00f3 muy arriba",
+      "food_target": [
+        0.79375,
+        0.7458333333333333
+      ],
+      "traj_len": 80
+    },
+    {
+      "timestamp": "2026-03-29T17:53:48.289832",
+      "episode": 2,
+      "success": true,
+      "reward": 0.4,
+      "reason": "\u00e9xito parcial",
+      "food_target": [
+        0.7734375,
+        0.715625
+      ],
+      "traj_len": 41
+    },
+    {
+      "timestamp": "2026-03-29T17:58:14.815034",
+      "episode": 3,
+      "success": true,
+      "reward": 1.0,
+      "reason": "\u00e9xito excelente",
+      "food_target": [
+        0.78046875,
+        0.7020833333333333
+      ],
+      "traj_len": 43
+    },
+    {
+      "timestamp": "2026-03-29T18:01:50.203289",
+      "episode": 4,
+      "success": true,
+      "reward": 1.0,
+      "reason": "\u00e9xito excelente",
+      "food_target": [
+        0.74140625,
+        0.696875
+      ],
+      "traj_len": 34
+    },
+    {
+      "timestamp": "2026-03-29T18:05:31.656933",
+      "episode": 5,
+      "success": true,
+      "reward": 1.0,
+      "reason": "\u00e9xito excelente",
+      "food_target": [
+        0.684375,
+        0.7520833333333333
+      ],
+      "traj_len": 30
+    },
+    {
+      "timestamp": "2026-03-29T18:08:41.910185",
+      "episode": 6,
+      "success": true,
+      "reward": 1.0,
+      "reason": "\u00e9xito excelente",
+      "food_target": [
+        0.60859375,
+        0.7489583333333333
+      ],
+      "traj_len": 25
+    },
+    {
+      "timestamp": "2026-03-29T18:11:22.940026",
+      "episode": 7,
+      "success": true,
+      "reward": 1.0,
+      "reason": "\u00e9xito excelente",
+      "food_target": [
+        0.5328125,
+        0.76875
+      ],
+      "traj_len": 23
+    },
+    {
+      "timestamp": "2026-03-29T18:13:49.785422",
+      "episode": 8,
+      "success": true,
+      "reward": 1.0,
+      "reason": "\u00e9xito excelente",
+      "food_target": [
+        0.47109375,
+        0.7666666666666667
+      ],
+      "traj_len": 21
+    },
+    {
+      "timestamp": "2026-03-29T18:16:48.265145",
+      "episode": 9,
+      "success": true,
+      "reward": 1.0,
+      "reason": "\u00e9xito excelente",
+      "food_target": [
+        0.378125,
+        0.7520833333333333
+      ],
+      "traj_len": 25
+    },
+    {
+      "timestamp": "2026-03-29T18:19:38.005239",
+      "episode": 10,
+      "success": false,
+      "reward": -0.8,
+      "reason": "cerr\u00f3 muy arriba",
+      "food_target": [
+        0.2984375,
+        0.7635416666666667
+      ],
+      "traj_len": 17
+    },
+    {
+      "timestamp": "2026-03-29T18:22:06.643709",
+      "episode": 11,
+      "success": false,
+      "reward": -0.8,
+      "reason": "cerr\u00f3 muy arriba",
+      "food_target": [
+        0.29765625,
+        0.7729166666666667
+      ],
+      "traj_len": 19
+    },
+    {
+      "timestamp": "2026-03-29T18:24:17.976617",
+      "episode": 12,
+      "success": false,
+      "reward": -0.8,
+      "reason": "cerr\u00f3 muy arriba",
+      "food_target": [
+        0.30234375,
+        0.78125
+      ],
+      "traj_len": 18
+    },
+    {
+      "timestamp": "2026-03-29T18:27:28.059606",
+      "episode": 13,
+      "success": false,
+      "reward": -0.8,
+      "reason": "cerr\u00f3 muy arriba",
+      "food_target": [
+        0.30703125,
+        0.7822916666666667
+      ],
+      "traj_len": 17
+    },
+    {
+      "timestamp": "2026-03-29T18:32:40.470286",
+      "episode": 14,
+      "success": false,
+      "reward": -0.6,
+      "reason": "lateral izquierdo",
+      "food_target": [
+        0.3109375,
+        0.7822916666666667
+      ],
+      "traj_len": 34
+    },
+    {
+      "timestamp": "2026-03-29T18:35:17.921906",
+      "episode": 15,
+      "success": false,
+      "reward": -0.8,
+      "reason": "cerr\u00f3 muy arriba",
+      "food_target": [
+        0.321875,
+        0.7895833333333333
+      ],
+      "traj_len": 19
+    },
+    {
+      "timestamp": "2026-03-29T18:38:20.151420",
+      "episode": 16,
+      "success": false,
+      "reward": -0.6,
+      "reason": "lateral inferior (muy cerca)",
+      "food_target": [
+        0.32109375,
+        0.7895833333333333
+      ],
+      "traj_len": 19
+    },
+    {
+      "timestamp": "2026-03-29T18:40:54.264315",
+      "episode": 17,
+      "success": false,
+      "reward": -0.8,
+      "reason": "cerr\u00f3 muy arriba",
+      "food_target": [
+        0.31640625,
+        0.771875
+      ],
+      "traj_len": 22
+    },
+    {
+      "timestamp": "2026-03-29T18:43:53.063311",
+      "episode": 18,
+      "success": false,
+      "reward": -0.6,
+      "reason": "lateral superior (muy lejos)",
+      "food_target": [
+        0.30859375,
+        0.7739583333333333
+      ],
+      "traj_len": 17
+    },
+    {
+      "timestamp": "2026-03-29T18:47:20.570576",
+      "episode": 19,
+      "success": false,
+      "reward": -0.8,
+      "reason": "cerr\u00f3 muy arriba",
+      "food_target": [
+        0.30859375,
+        0.7770833333333333
+      ],
+      "traj_len": 29
+    },
+    {
+      "timestamp": "2026-03-29T18:49:44.074990",
+      "episode": 20,
+      "success": true,
+      "reward": 1.0,
+      "reason": "\u00e9xito excelente",
+      "food_target": [
+        0.30859375,
+        0.7708333333333334
+      ],
+      "traj_len": 19
+    },
+    {
+      "timestamp": "2026-03-29T18:54:27.226758",
+      "episode": 21,
+      "success": false,
+      "reward": -0.6,
+      "reason": "lateral superior (muy lejos)",
+      "food_target": [
+        0.8234375,
+        0.6510416666666666
+      ],
+      "traj_len": 30
+    },
+    {
+      "timestamp": "2026-03-29T18:57:21.683388",
+      "episode": 22,
+      "success": false,
+      "reward": -0.6,
+      "reason": "lateral inferior (muy cerca)",
+      "food_target": [
+        0.68828125,
+        0.6625
+      ],
+      "traj_len": 24
+    },
+    {
+      "timestamp": "2026-03-29T19:00:43.028886",
+      "episode": 23,
+      "success": true,
+      "reward": 0.4,
+      "reason": "\u00e9xito parcial",
+      "food_target": [
+        0.7109375,
+        0.646875
+      ],
+      "traj_len": 25
+    },
+    {
+      "timestamp": "2026-03-29T19:04:32.841894",
+      "episode": 24,
+      "success": false,
+      "reward": -0.6,
+      "reason": "lateral derecho",
+      "food_target": [
+        0.68828125,
+        0.6239583333333333
+      ],
+      "traj_len": 31
+    },
+    {
+      "timestamp": "2026-03-29T19:19:05.592042",
+      "episode": 25,
+      "success": true,
+      "reward": 1.0,
+      "reason": "\u00e9xito excelente",
+      "food_target": [
+        0.71484375,
+        0.7260416666666667
+      ],
+      "traj_len": 32
+    },
+    {
+      "timestamp": "2026-03-29T19:22:35.008045",
+      "episode": 26,
+      "success": true,
+      "reward": 0.4,
+      "reason": "\u00e9xito parcial",
+      "food_target": [
+        0.69609375,
+        0.7
+      ],
+      "traj_len": 27
+    },
+    {
+      "timestamp": "2026-03-29T19:27:50.926342",
+      "episode": 27,
+      "success": true,
+      "reward": 1.0,
+      "reason": "\u00e9xito excelente",
+      "food_target": [
+        0.6671875,
+        0.7052083333333333
+      ],
+      "traj_len": 47
+    },
+    {
+      "timestamp": "2026-03-29T19:30:35.433489",
+      "episode": 28,
+      "success": true,
+      "reward": 1.0,
+      "reason": "\u00e9xito excelente",
+      "food_target": [
+        0.634375,
+        0.7125
+      ],
+      "traj_len": 25
+    },
+    {
+      "timestamp": "2026-03-29T19:34:25.564624",
+      "episode": 29,
+      "success": true,
+      "reward": 1.0,
+      "reason": "\u00e9xito excelente",
+      "food_target": [
+        0.6640625,
+        0.7010416666666667
+      ],
+      "traj_len": 39
+    },
+    {
+      "timestamp": "2026-03-29T19:41:11.868381",
+      "episode": 30,
+      "success": true,
+      "reward": 1.0,
+      "reason": "\u00e9xito excelente",
+      "food_target": [
+        0.64453125,
+        0.7416666666666667
+      ],
+      "traj_len": 26
+    },
+    {
+      "timestamp": "2026-03-29T19:44:01.028975",
+      "episode": 31,
+      "success": true,
+      "reward": 1.0,
+      "reason": "\u00e9xito excelente",
+      "food_target": [
+        0.4640625,
+        0.71875
+      ],
+      "traj_len": 20
+    },
+    {
+      "timestamp": "2026-03-29T19:47:54.441128",
+      "episode": 32,
+      "success": false,
+      "reward": -0.8,
+      "reason": "cerr\u00f3 muy arriba",
+      "food_target": [
+        0.46171875,
+        0.7125
+      ],
+      "traj_len": 21
+    },
+    {
+      "timestamp": "2026-03-29T19:50:49.889861",
+      "episode": 33,
+      "success": true,
+      "reward": 1.0,
+      "reason": "\u00e9xito excelente",
+      "food_target": [
+        0.421875,
+        0.7885416666666667
+      ],
+      "traj_len": 25
+    },
+    {
+      "timestamp": "2026-03-29T19:53:38.525715",
+      "episode": 34,
+      "success": false,
+      "reward": -0.6,
+      "reason": "lateral superior (muy lejos)",
+      "food_target": [
+        0.41484375,
+        0.76875
+      ],
+      "traj_len": 18
+    },
+    {
+      "timestamp": "2026-03-29T19:56:12.510210",
+      "episode": 35,
+      "success": true,
+      "reward": 1.0,
+      "reason": "\u00e9xito excelente",
+      "food_target": [
+        0.4203125,
+        0.7864583333333334
+      ],
+      "traj_len": 18
+    },
+    {
+      "timestamp": "2026-03-29T19:58:27.413219",
+      "episode": 36,
+      "success": false,
+      "reward": -0.6,
+      "reason": "lateral superior (muy lejos)",
+      "food_target": [
+        0.30390625,
+        0.7854166666666667
+      ],
+      "traj_len": 17
+    },
+    {
+      "timestamp": "2026-03-29T20:00:32.708345",
+      "episode": 37,
+      "success": false,
+      "reward": -0.6,
+      "reason": "lateral derecho",
+      "food_target": [
+        0.29921875,
+        0.7895833333333333
+      ],
+      "traj_len": 16
+    },
+    {
+      "timestamp": "2026-03-29T20:03:06.269120",
+      "episode": 38,
+      "success": false,
+      "reward": -0.6,
+      "reason": "lateral derecho",
+      "food_target": [
+        0.309375,
+        0.7895833333333333
+      ],
+      "traj_len": 18
+    },
+    {
+      "timestamp": "2026-03-29T20:05:25.078847",
+      "episode": 39,
+      "success": true,
+      "reward": 1.0,
+      "reason": "\u00e9xito excelente",
+      "food_target": [
+        0.29765625,
+        0.8010416666666667
+      ],
+      "traj_len": 20
+    },
+    {
+      "timestamp": "2026-03-29T20:08:36.415850",
+      "episode": 40,
+      "success": true,
+      "reward": 1.0,
+      "reason": "\u00e9xito excelente",
+      "food_target": [
+        0.25859375,
+        0.7875
+      ],
+      "traj_len": 32
+    },
+    {
+      "timestamp": "2026-03-29T20:10:53.138333",
+      "episode": 41,
+      "success": true,
+      "reward": 1.0,
+      "reason": "\u00e9xito excelente",
+      "food_target": [
+        0.16875,
+        0.69375
+      ],
+      "traj_len": 19
+    },
+    {
+      "timestamp": "2026-03-29T20:13:31.105811",
+      "episode": 42,
+      "success": false,
+      "reward": -0.6,
+      "reason": "lateral superior (muy lejos)",
+      "food_target": [
+        0.23828125,
+        0.671875
+      ],
+      "traj_len": 20
+    },
+    {
+      "timestamp": "2026-03-29T20:15:59.943262",
+      "episode": 43,
+      "success": false,
+      "reward": -0.6,
+      "reason": "lateral superior (muy lejos)",
+      "food_target": [
+        0.23828125,
+        0.6729166666666667
+      ],
+      "traj_len": 20
+    },
+    {
+      "timestamp": "2026-03-29T20:18:16.186034",
+      "episode": 44,
+      "success": true,
+      "reward": 0.4,
+      "reason": "\u00e9xito parcial",
+      "food_target": [
+        0.23515625,
+        0.6729166666666667
+      ],
+      "traj_len": 18
+    },
+    {
+      "timestamp": "2026-03-29T20:20:32.786070",
+      "episode": 45,
+      "success": false,
+      "reward": -0.8,
+      "reason": "cerr\u00f3 muy arriba",
+      "food_target": [
+        0.23203125,
+        0.6760416666666667
+      ],
+      "traj_len": 17
+    },
+    {
+      "timestamp": "2026-03-29T20:23:13.634190",
+      "episode": 46,
+      "success": true,
+      "reward": 1.0,
+      "reason": "\u00e9xito excelente",
+      "food_target": [
+        0.30703125,
+        0.7197916666666667
+      ],
+      "traj_len": 23
+    },
+    {
+      "timestamp": "2026-03-29T20:26:08.611750",
+      "episode": 47,
+      "success": false,
+      "reward": -0.8,
+      "reason": "cerr\u00f3 muy abajo",
+      "food_target": [
+        0.4359375,
+        0.69375
+      ],
+      "traj_len": 25
+    },
+    {
+      "timestamp": "2026-03-29T20:29:22.799252",
+      "episode": 48,
+      "success": true,
+      "reward": 1.0,
+      "reason": "\u00e9xito excelente",
+      "food_target": [
+        0.56484375,
+        0.7145833333333333
+      ],
+      "traj_len": 28
+    },
+    {
+      "timestamp": "2026-03-29T20:32:48.825409",
+      "episode": 49,
+      "success": false,
+      "reward": -0.6,
+      "reason": "lateral derecho",
+      "food_target": [
+        0.678125,
+        0.678125
+      ],
+      "traj_len": 30
+    },
+    {
+      "timestamp": "2026-03-29T20:36:26.473322",
+      "episode": 50,
+      "success": false,
+      "reward": -0.6,
+      "reason": "lateral derecho",
+      "food_target": [
+        0.6578125,
+        0.659375
+      ],
+      "traj_len": 31
+    },
+    {
+      "timestamp": "2026-03-29T20:39:56.581435",
+      "episode": 51,
+      "success": true,
+      "reward": 1.0,
+      "reason": "\u00e9xito excelente",
+      "food_target": [
+        0.6453125,
+        0.6833333333333333
+      ],
+      "traj_len": 28
+    },
+    {
+      "timestamp": "2026-03-29T20:44:38.795601",
+      "episode": 52,
+      "success": true,
+      "reward": 1.0,
+      "reason": "\u00e9xito excelente",
+      "food_target": [
+        0.75390625,
+        0.6916666666666667
+      ],
+      "traj_len": 29
+    },
+    {
+      "timestamp": "2026-03-29T20:48:01.627133",
+      "episode": 53,
+      "success": true,
+      "reward": 1.0,
+      "reason": "\u00e9xito excelente",
+      "food_target": [
+        0.75390625,
+        0.7395833333333334
+      ],
+      "traj_len": 31
+    },
+    {
+      "timestamp": "2026-03-29T20:51:58.245243",
+      "episode": 54,
+      "success": true,
+      "reward": 1.0,
+      "reason": "\u00e9xito excelente",
+      "food_target": [
+        0.8625,
+        0.678125
+      ],
+      "traj_len": 34
+    },
+    {
+      "timestamp": "2026-03-29T20:56:09.153443",
+      "episode": 55,
+      "success": false,
+      "reward": -0.6,
+      "reason": "lateral izquierdo",
+      "food_target": [
+        0.86640625,
+        0.6020833333333333
+      ],
+      "traj_len": 33
+    },
+    {
+      "timestamp": "2026-03-29T21:00:33.114816",
+      "episode": 56,
+      "success": false,
+      "reward": -0.6,
+      "reason": "lateral derecho",
+      "food_target": [
+        0.86171875,
+        0.68125
+      ],
+      "traj_len": 35
+    },
+    {
+      "timestamp": "2026-03-29T21:04:28.996423",
+      "episode": 57,
+      "success": false,
+      "reward": -0.8,
+      "reason": "cerr\u00f3 muy arriba",
+      "food_target": [
+        0.87734375,
+        0.6020833333333333
+      ],
+      "traj_len": 33
+    },
+    {
+      "timestamp": "2026-03-29T21:08:09.893501",
+      "episode": 58,
+      "success": false,
+      "reward": -0.6,
+      "reason": "lateral izquierdo",
+      "food_target": [
+        0.85546875,
+        0.6364583333333333
+      ],
+      "traj_len": 28
+    },
+    {
+      "timestamp": "2026-03-29T21:11:24.462793",
+      "episode": 59,
+      "success": false,
+      "reward": -0.8,
+      "reason": "cerr\u00f3 muy arriba",
+      "food_target": [
+        0.85,
+        0.6229166666666667
+      ],
+      "traj_len": 28
+    },
+    {
+      "timestamp": "2026-03-29T21:14:28.385348",
+      "episode": 60,
+      "success": true,
+      "reward": 1.0,
+      "reason": "\u00e9xito excelente",
+      "food_target": [
+        0.846875,
+        0.6177083333333333
+      ],
+      "traj_len": 26
+    },
+    {
+      "timestamp": "2026-03-29T21:17:55.373252",
+      "episode": 61,
+      "success": false,
+      "reward": -0.8,
+      "reason": "cerr\u00f3 muy arriba",
+      "food_target": [
+        0.8203125,
+        0.5895833333333333
+      ],
+      "traj_len": 30
+    },
+    {
+      "timestamp": "2026-03-29T21:21:34.900175",
+      "episode": 62,
+      "success": false,
+      "reward": -0.6,
+      "reason": "lateral superior (muy lejos)",
+      "food_target": [
+        0.82890625,
+        0.5322916666666667
+      ],
+      "traj_len": 29
+    },
+    {
+      "timestamp": "2026-03-29T21:25:26.830686",
+      "episode": 63,
+      "success": false,
+      "reward": -0.6,
+      "reason": "lateral superior (muy lejos)",
+      "food_target": [
+        0.84375,
+        0.5458333333333333
+      ],
+      "traj_len": 33
+    },
+    {
+      "timestamp": "2026-03-29T21:29:24.359264",
+      "episode": 64,
+      "success": false,
+      "reward": -0.6,
+      "reason": "lateral superior (muy lejos)",
+      "food_target": [
+        0.84765625,
+        0.546875
+      ],
+      "traj_len": 34
+    },
+    {
+      "timestamp": "2026-03-29T21:32:49.528288",
+      "episode": 65,
+      "success": true,
+      "reward": 1.0,
+      "reason": "\u00e9xito excelente",
+      "food_target": [
+        0.8484375,
+        0.5510416666666667
+      ],
+      "traj_len": 29
+    },
+    {
+      "timestamp": "2026-03-29T21:36:02.426860",
+      "episode": 66,
+      "success": false,
+      "reward": -0.8,
+      "reason": "cerr\u00f3 muy arriba",
+      "food_target": [
+        0.76015625,
+        0.5427083333333333
+      ],
+      "traj_len": 29
+    },
+    {
+      "timestamp": "2026-03-29T21:39:28.456489",
+      "episode": 67,
+      "success": true,
+      "reward": 1.0,
+      "reason": "\u00e9xito excelente",
+      "food_target": [
+        0.696875,
+        0.559375
+      ],
+      "traj_len": 30
+    },
+    {
+      "timestamp": "2026-03-29T21:42:22.534763",
+      "episode": 68,
+      "success": true,
+      "reward": 1.0,
+      "reason": "\u00e9xito excelente",
+      "food_target": [
+        0.5578125,
+        0.5614583333333333
+      ],
+      "traj_len": 24
+    },
+    {
+      "timestamp": "2026-03-29T21:45:15.234974",
+      "episode": 69,
+      "success": false,
+      "reward": -0.8,
+      "reason": "cerr\u00f3 muy arriba",
+      "food_target": [
+        0.4875,
+        0.559375
+      ],
+      "traj_len": 22
+    },
+    {
+      "timestamp": "2026-03-29T21:48:21.339259",
+      "episode": 70,
+      "success": false,
+      "reward": -0.8,
+      "reason": "cerr\u00f3 muy arriba",
+      "food_target": [
+        0.50703125,
+        0.5802083333333333
+      ],
+      "traj_len": 25
+    },
+    {
+      "timestamp": "2026-03-29T21:51:43.127396",
+      "episode": 71,
+      "success": false,
+      "reward": -0.6,
+      "reason": "lateral derecho",
+      "food_target": [
+        0.45859375,
+        0.56875
+      ],
+      "traj_len": 25
+    },
+    {
+      "timestamp": "2026-03-29T21:54:42.835382",
+      "episode": 72,
+      "success": false,
+      "reward": -0.6,
+      "reason": "lateral derecho",
+      "food_target": [
+        0.4796875,
+        0.640625
+      ],
+      "traj_len": 25
+    },
+    {
+      "timestamp": "2026-03-29T21:57:51.081617",
+      "episode": 73,
+      "success": false,
+      "reward": -0.6,
+      "reason": "lateral superior (muy lejos)",
+      "food_target": [
+        0.51953125,
+        0.6458333333333334
+      ],
+      "traj_len": 26
+    },
+    {
+      "timestamp": "2026-03-29T22:00:45.484756",
+      "episode": 74,
+      "success": true,
+      "reward": 1.0,
+      "reason": "\u00e9xito excelente",
+      "food_target": [
+        0.5171875,
+        0.6177083333333333
+      ],
+      "traj_len": 23
+    },
+    {
+      "timestamp": "2026-03-29T22:03:33.545117",
+      "episode": 75,
+      "success": true,
+      "reward": 1.0,
+      "reason": "\u00e9xito excelente",
+      "food_target": [
+        0.44140625,
+        0.6177083333333333
+      ],
+      "traj_len": 25
+    },
+    {
+      "timestamp": "2026-03-29T22:06:40.171574",
+      "episode": 76,
+      "success": false,
+      "reward": -0.6,
+      "reason": "lateral izquierdo",
+      "food_target": [
+        0.31796875,
+        0.5989583333333334
+      ],
+      "traj_len": 25
+    },
+    {
+      "timestamp": "2026-03-29T22:09:21.339859",
+      "episode": 77,
+      "success": true,
+      "reward": 1.0,
+      "reason": "\u00e9xito excelente",
+      "food_target": [
+        0.32109375,
+        0.5979166666666667
+      ],
+      "traj_len": 21
+    },
+    {
+      "timestamp": "2026-03-29T22:12:03.028208",
+      "episode": 78,
+      "success": true,
+      "reward": 1.0,
+      "reason": "\u00e9xito excelente",
+      "food_target": [
+        0.18203125,
+        0.6208333333333333
+      ],
+      "traj_len": 22
+    },
+    {
+      "timestamp": "2026-03-29T22:14:41.234278",
+      "episode": 79,
+      "success": false,
+      "reward": -0.8,
+      "reason": "cerr\u00f3 muy arriba",
+      "food_target": [
+        0.23515625,
+        0.484375
+      ],
+      "traj_len": 22
+    },
+    {
+      "timestamp": "2026-03-29T22:16:53.878921",
+      "episode": 80,
+      "success": false,
+      "reward": -0.8,
+      "reason": "cerr\u00f3 muy arriba",
+      "food_target": [
+        0.23515625,
+        0.4822916666666667
+      ],
+      "traj_len": 19
+    },
+    {
+      "timestamp": "2026-03-29T22:20:37.187679",
+      "episode": 81,
+      "success": false,
+      "reward": -0.6,
+      "reason": "lateral superior (muy lejos)",
+      "food_target": [
+        0.2359375,
+        0.48020833333333335
+      ],
+      "traj_len": 22
+    },
+    {
+      "timestamp": "2026-03-29T22:22:53.970260",
+      "episode": 82,
+      "success": false,
+      "reward": -0.8,
+      "reason": "cerr\u00f3 muy arriba",
+      "food_target": [
+        0.2359375,
+        0.48125
+      ],
+      "traj_len": 20
+    },
+    {
+      "timestamp": "2026-03-29T22:25:17.993231",
+      "episode": 83,
+      "success": false,
+      "reward": -0.8,
+      "reason": "cerr\u00f3 muy arriba",
+      "food_target": [
+        0.2359375,
+        0.47708333333333336
+      ],
+      "traj_len": 20
+    },
+    {
+      "timestamp": "2026-03-29T22:27:42.588809",
+      "episode": 84,
+      "success": false,
+      "reward": -0.8,
+      "reason": "cerr\u00f3 muy arriba",
+      "food_target": [
+        0.21953125,
+        0.5114583333333333
+      ],
+      "traj_len": 21
+    },
+    {
+      "timestamp": "2026-03-29T22:30:16.329904",
+      "episode": 85,
+      "success": false,
+      "reward": -0.6,
+      "reason": "lateral superior (muy lejos)",
+      "food_target": [
+        0.22421875,
+        0.5083333333333333
+      ],
+      "traj_len": 22
+    },
+    {
+      "timestamp": "2026-03-29T22:32:47.812458",
+      "episode": 86,
+      "success": false,
+      "reward": -0.8,
+      "reason": "cerr\u00f3 muy arriba",
+      "food_target": [
+        0.2234375,
+        0.509375
+      ],
+      "traj_len": 19
+    },
+    {
+      "timestamp": "2026-03-29T22:35:22.751543",
+      "episode": 87,
+      "success": false,
+      "reward": -0.8,
+      "reason": "cerr\u00f3 muy arriba",
+      "food_target": [
+        0.2234375,
+        0.509375
+      ],
+      "traj_len": 20
+    },
+    {
+      "timestamp": "2026-03-29T22:37:50.882070",
+      "episode": 88,
+      "success": false,
+      "reward": -0.8,
+      "reason": "cerr\u00f3 muy arriba",
+      "food_target": [
+        0.2234375,
+        0.5052083333333334
+      ],
+      "traj_len": 21
+    },
+    {
+      "timestamp": "2026-03-29T22:40:45.718108",
+      "episode": 89,
+      "success": false,
+      "reward": -0.6,
+      "reason": "lateral superior (muy lejos)",
+      "food_target": [
+        0.22578125,
+        0.509375
+      ],
+      "traj_len": 28
+    },
+    {
+      "timestamp": "2026-03-29T22:43:20.966142",
+      "episode": 90,
+      "success": false,
+      "reward": -0.6,
+      "reason": "lateral superior (muy lejos)",
+      "food_target": [
+        0.2375,
+        0.5145833333333333
+      ],
+      "traj_len": 21
+    },
+    {
+      "timestamp": "2026-03-29T22:45:47.252786",
+      "episode": 91,
+      "success": true,
+      "reward": 1.0,
+      "reason": "\u00e9xito excelente",
+      "food_target": [
+        0.2265625,
+        0.51875
+      ],
+      "traj_len": 22
+    },
+    {
+      "timestamp": "2026-03-29T22:48:40.683140",
+      "episode": 92,
+      "success": false,
+      "reward": -0.8,
+      "reason": "cerr\u00f3 muy arriba",
+      "food_target": [
+        0.30234375,
+        0.4739583333333333
+      ],
+      "traj_len": 27
+    },
+    {
+      "timestamp": "2026-03-29T22:51:25.865520",
+      "episode": 93,
+      "success": false,
+      "reward": -0.6,
+      "reason": "lateral superior (muy lejos)",
+      "food_target": [
+        0.30078125,
+        0.46041666666666664
+      ],
+      "traj_len": 22
+    },
+    {
+      "timestamp": "2026-03-29T22:54:38.104824",
+      "episode": 94,
+      "success": true,
+      "reward": 1.0,
+      "reason": "\u00e9xito excelente",
+      "food_target": [
+        0.30703125,
+        0.4666666666666667
+      ],
+      "traj_len": 22
+    },
+    {
+      "timestamp": "2026-03-29T22:57:23.452752",
+      "episode": 95,
+      "success": true,
+      "reward": 1.0,
+      "reason": "\u00e9xito excelente",
+      "food_target": [
+        0.41875,
+        0.49270833333333336
+      ],
+      "traj_len": 24
+    },
+    {
+      "timestamp": "2026-03-29T23:01:23.827700",
+      "episode": 96,
+      "success": false,
+      "reward": -0.6,
+      "reason": "lateral izquierdo",
+      "food_target": [
+        0.509375,
+        0.4583333333333333
+      ],
+      "traj_len": 25
+    },
+    {
+      "timestamp": "2026-03-29T23:04:04.073434",
+      "episode": 97,
+      "success": false,
+      "reward": -0.6,
+      "reason": "lateral inferior (muy cerca)",
+      "food_target": [
+        0.509375,
+        0.45729166666666665
+      ],
+      "traj_len": 20
+    },
+    {
+      "timestamp": "2026-03-29T23:07:09.887898",
+      "episode": 98,
+      "success": true,
+      "reward": 1.0,
+      "reason": "\u00e9xito excelente",
+      "food_target": [
+        0.503125,
+        0.44166666666666665
+      ],
+      "traj_len": 25
+    },
+    {
+      "timestamp": "2026-03-29T23:10:59.893506",
+      "episode": 99,
+      "success": true,
+      "reward": 1.0,
+      "reason": "\u00e9xito excelente",
+      "food_target": [
+        0.6625,
+        0.4739583333333333
+      ],
+      "traj_len": 32
+    },
+    {
+      "timestamp": "2026-03-29T23:15:27.114493",
+      "episode": 100,
+      "success": false,
+      "reward": -0.6,
+      "reason": "lateral superior (muy lejos)",
+      "food_target": [
+        0.6234375,
+        0.453125
+      ],
+      "traj_len": 34
+    },
+    {
+      "timestamp": "2026-03-29T23:21:27.161104",
+      "episode": 101,
+      "success": true,
+      "reward": 1.0,
+      "reason": "\u00e9xito excelente",
+      "food_target": [
+        0.62265625,
+        0.4635416666666667
+      ],
+      "traj_len": 30
+    },
+    {
+      "timestamp": "2026-03-29T23:25:15.138043",
+      "episode": 102,
+      "success": false,
+      "reward": -0.6,
+      "reason": "lateral superior (muy lejos)",
+      "food_target": [
+        0.61484375,
+        0.4583333333333333
+      ],
+      "traj_len": 33
+    },
+    {
+      "timestamp": "2026-03-29T23:28:22.165011",
+      "episode": 103,
+      "success": false,
+      "reward": -0.6,
+      "reason": "lateral izquierdo",
+      "food_target": [
+        0.65,
+        0.4427083333333333
+      ],
+      "traj_len": 26
+    },
+    {
+      "timestamp": "2026-03-29T23:31:34.554758",
+      "episode": 104,
+      "success": true,
+      "reward": 1.0,
+      "reason": "\u00e9xito excelente",
+      "food_target": [
+        0.66640625,
+        0.46979166666666666
+      ],
+      "traj_len": 29
+    },
+    {
+      "timestamp": "2026-03-29T23:35:17.520070",
+      "episode": 105,
+      "success": true,
+      "reward": 1.0,
+      "reason": "\u00e9xito excelente",
+      "food_target": [
+        0.77265625,
+        0.46041666666666664
+      ],
+      "traj_len": 37
+    },
+    {
+      "timestamp": "2026-03-29T23:41:08.234748",
+      "episode": 106,
+      "success": true,
+      "reward": 1.0,
+      "reason": "\u00e9xito excelente",
+      "food_target": [
+        0.80625,
+        0.3385416666666667
+      ],
+      "traj_len": 63
+    },
+    {
+      "timestamp": "2026-03-29T23:44:25.368184",
+      "episode": 107,
+      "success": true,
+      "reward": 1.0,
+      "reason": "\u00e9xito excelente",
+      "food_target": [
+        0.75234375,
+        0.28229166666666666
+      ],
+      "traj_len": 26
+    },
+    {
+      "timestamp": "2026-03-29T23:47:53.841196",
+      "episode": 108,
+      "success": false,
+      "reward": -0.8,
+      "reason": "cerr\u00f3 muy arriba",
+      "food_target": [
+        0.6578125,
+        0.2947916666666667
+      ],
+      "traj_len": 25
+    },
+    {
+      "timestamp": "2026-03-29T23:51:45.863229",
+      "episode": 109,
+      "success": false,
+      "reward": -0.6,
+      "reason": "lateral superior (muy lejos)",
+      "food_target": [
+        0.56328125,
+        0.30625
+      ],
+      "traj_len": 37
+    },
+    {
+      "timestamp": "2026-03-29T23:56:04.245255",
+      "episode": 110,
+      "success": true,
+      "reward": 1.0,
+      "reason": "\u00e9xito excelente",
+      "food_target": [
+        0.540625,
+        0.30520833333333336
+      ],
+      "traj_len": 42
+    },
+    {
+      "timestamp": "2026-03-29T23:59:08.602672",
+      "episode": 111,
+      "success": false,
+      "reward": -0.8,
+      "reason": "cerr\u00f3 muy arriba",
+      "food_target": [
+        0.3234375,
+        0.3302083333333333
+      ],
+      "traj_len": 26
+    },
+    {
+      "timestamp": "2026-03-30T00:04:33.607123",
+      "episode": 112,
+      "success": true,
+      "reward": 1.0,
+      "reason": "\u00e9xito excelente",
+      "food_target": [
+        0.31953125,
+        0.328125
+      ],
+      "traj_len": 29
+    },
+    {
+      "timestamp": "2026-03-30T00:09:35.035635",
+      "episode": 113,
+      "success": false,
+      "reward": -0.6,
+      "reason": "lateral superior (muy lejos)",
+      "food_target": [
+        0.1890625,
+        0.3302083333333333
+      ],
+      "traj_len": 58
+    },
+    {
+      "timestamp": "2026-03-30T00:24:03.461126",
+      "episode": 114,
+      "success": true,
+      "reward": 1.0,
+      "reason": "\u00e9xito excelente",
+      "food_target": [
+        0.22890625,
+        0.303125
+      ],
+      "traj_len": 28
+    },
+    {
+      "timestamp": "2026-03-30T00:27:42.034719",
+      "episode": 115,
+      "success": true,
+      "reward": 1.0,
+      "reason": "\u00e9xito excelente",
+      "food_target": [
+        0.328125,
+        0.12604166666666666
+      ],
+      "traj_len": 34
+    },
+    {
+      "timestamp": "2026-03-30T00:43:48.553125",
+      "episode": 116,
+      "success": false,
+      "reward": -0.8,
+      "reason": "cerr\u00f3 muy arriba",
+      "food_target": [
+        0.35546875,
+        0.09583333333333334
+      ],
+      "traj_len": 80
+    },
+    {
+      "timestamp": "2026-03-30T01:12:18.129559",
+      "episode": 117,
+      "success": false,
+      "reward": -0.8,
+      "reason": "cerr\u00f3 muy arriba",
+      "food_target": [
+        0.3796875,
+        0.22604166666666667
+      ],
+      "traj_len": 27
+    }
+  ],
+  "total_success": 51,
+  "total_attempts": 117
+}

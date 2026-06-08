@@ -1,0 +1,23 @@
+{
+  "timestamp": "2026-05-16T12:18:15.941013",
+  "referencia_hsv": {
+    "H_mean": 97.3564453125,
+    "H_std": 18.5813045501709,
+    "S_mean": 18.771709442138672,
+    "S_std": 7.979453086853027,
+    "V_mean": 233.1171112060547,
+    "V_std": 27.529279708862305,
+    "n_pixels": 157470
+  },
+  "tolerancias": {
+    "H": 15,
+    "S": 40,
+    "V": 50
+  },
+  "umbrales_pct": {
+    "lleno": 10.0,
+    "vacio": 5.0
+  },
+  "erosion_borde_px": 12,
+  "nota": "Referencia capturada con el plato VACIO. El sistema compara cada frame contra este color de fondo. Si >UMBRAL_LLENO_PCT% de pixels difieren del fondo -> hay sopa. Si <UMBRAL_VACIO_PCT% de pixels difieren del fondo -> plato vacio."
+}

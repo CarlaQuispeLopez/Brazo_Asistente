@@ -1,1 +1,25 @@
-venv/venv/
+# Entorno virtual
+venv/
+**/venv/
+.venv/
+env/
+
+# Modelos pesados
+*.pt
+*.pth
+*.onnx
+*.engine
+**/*.pt
+
+# Demos, datasets y checkpoints
+demos/
+**/demos/
+*.pkl
+*.pickle
+
+# Caché Python
+__pycache__/
+*.pyc
+
+# VS Code
+.vscode/

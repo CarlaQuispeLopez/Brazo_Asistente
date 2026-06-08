@@ -1,0 +1,31 @@
+{
+  "comando": "DETENER",
+  "modo": "trozo",
+  "simulacion": false,
+  "fase_actual": "AGARRE_CUCHARA_OK",
+  "ciclo": 0,
+  "agarres_ok": 0,
+  "cam2_owner": "interface",
+  "cam2_interfaz_lista": true,
+  "yolo_activo": false,
+  "cam1_owner": "cuchara",
+  "config": {
+    "puerto": "COM3",
+    "baud": 115200,
+    "cam1": 2,
+    "cam2": 1,
+    "threshold_cm": 20.0,
+    "eating_cm": 15.0,
+    "far_cm": 20.0,
+    "modelo_pt": "C:\\Users\\MSI LAPTOP\\Documents\\BRAZO2\\CODIGOS_FINAL\\modelo_bc.pt",
+    "calib_json": "C:\\Users\\MSI LAPTOP\\Documents\\BRAZO2\\CODIGOS_FINAL\\calibracion_cuadricula.json"
+  },
+  "objetivo": {
+    "cx_norm": 0.2536,
+    "cy_norm": 0.06002,
+    "conf": 0.2387,
+    "listo": true
+  },
+  "modo_liquido_activo": true,
+  "voz": "Terminando servicio de sopa"
+}

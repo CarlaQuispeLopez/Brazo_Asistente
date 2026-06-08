@@ -7,8 +7,8 @@ import torch.nn as nn
 from torch.utils.data import TensorDataset, DataLoader
 from datetime import datetime
 
-CLEAN_PKL  = r"C:\Users\MSI LAPTOP\Documents\BRAZO2\CODIGOS_NUEVO\demos\demonstrations_clean.pkl"
-MODELO_PT  = r"C:\Users\MSI LAPTOP\Documents\BRAZO2\CODIGOS_NUEVO\modelo_bc.pt"
+CLEAN_PKL  = r"C:\Users\MSI LAPTOP\Documents\BRAZO2\CODIGOS_complementos\demos\demonstrations_clean.pkl"
+MODELO_PT  = r"C:\Users\MSI LAPTOP\Documents\BRAZO2\CODIGOS_complementos\modelo_bc.pt"
 
 HIDDEN       = [128, 128, 64]
 DROPOUT      = 0.05

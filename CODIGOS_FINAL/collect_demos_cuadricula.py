@@ -9,10 +9,10 @@ import cv2
 from pathlib import Path
 from datetime import datetime
 
-DEMO_DIR        = r"C:\Users\MSI LAPTOP\Documents\BRAZO2\CODIGOS_NUEVO\demos"
-DEMO_FILE       = r"C:\Users\MSI LAPTOP\Documents\BRAZO2\CODIGOS_NUEVO\demos\demonstrations.pkl"
-CHECKPOINT_FILE = r"C:\Users\MSI LAPTOP\Documents\BRAZO2\CODIGOS_NUEVO\demos\checkpoint_ep_activo.pkl"
-CALIB_JSON      = r"C:\Users\MSI LAPTOP\Documents\BRAZO2\CODIGOS_NUEVO\calibracion_cuadricula.json"
+DEMO_DIR        = r"C:\Users\MSI LAPTOP\Documents\BRAZO2\CODIGOS_complementos\demos"
+DEMO_FILE       = r"C:\Users\MSI LAPTOP\Documents\BRAZO2\CODIGOS_complementos\demos\demonstrations.pkl"
+CHECKPOINT_FILE = r"C:\Users\MSI LAPTOP\Documents\BRAZO2\CODIGOS_complementos\demos\checkpoint_ep_activo.pkl"
+CALIB_JSON      = r"C:\Users\MSI LAPTOP\Documents\BRAZO2\CODIGOS_complementos\calibracion_cuadricula.json"
 
 SERIAL_PORT  = "COM5"
 SERIAL_BAUD  = 115200
